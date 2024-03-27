@@ -1,0 +1,36 @@
+$color-primary:#069861;
+$color-secondary:#1E3D1A;
+$color-tertiary:#B89C00;
+$color-primeblue:#092942;
+$color-black:#000000;
+$color-white:#FFFFFF;
+$color-grey:#f8f8f8;
+$color-text:#5e5e5e;
+
+*{
+    line-height: 2;
+    letter-spacing: 0.04em;
+}
+.ninty_container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+li{
+    list-style-type: none;
+  
+}
+a{
+    text-decoration: none;
+    color:$color-white;
+
+}
+
+.center__text{
+   text-align: center;
+}
+
+.img__responsive{
+    max-width: 100%;
+    height: auto;
+}
