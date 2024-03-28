@@ -35,7 +35,7 @@
 
             </ul>
         </div>
-        <div class="ninty_container">
+        <div class="ninty_container last">
             <h3>Menu</h3>
             <ul>
                 
@@ -73,6 +73,9 @@ export default {
     margin-top: 1rem;
     margin-left: 1.4rem;
 
+ }
+ .last{
+    display: inline-block;
  }
 @media(min-width:64rem){
     .footer{

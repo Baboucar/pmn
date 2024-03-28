@@ -38,18 +38,18 @@
         </section>
         <section class="cards">
             <div class="card">
-                <img class="responsive_img card__img" src="../assets/images/card1.webp" alt="card">
+                <img class="responsive_img card__img" src="/images/card1.webp" alt="card">
             </div>
             <div class="card">
-                <img class="responsive_img card__img" src="../assets/images/card2.webp" alt="card">
+                <img class="responsive_img card__img" src="/images/card2.webp" alt="card">
             </div>
             <div class="card">
-                <img class="responsive_img card__img" src="../assets/images/card1.webp" alt="card">
+                <img class="responsive_img card__img" src="/images/card3.webp" alt="card">
             </div>
 
         </section>
         <section class="side__content ninty_container">
-            <img class="responsive_img" src="../assets/images/side-image.jpeg" alt="side">
+            <img class="responsive_img" src="/images/side-image.jpeg" alt="side">
             <div class="side__text">
                 <h2 class="side__title">À propos d’Interlux
                 </h2>
@@ -110,9 +110,9 @@ export default defineComponent({
 
         // Sample images array
         const images = ref([
-            'src/assets/slider/slide3.jpeg',
-            'src/assets/slider/slide3.jpeg',
-            'src/assets/slider/slide3.jpeg'
+            '/slider/card2.webp',
+            '/slider/slide3.jpeg',
+            '/slider/slide3.jpeg'
         ]);
 
         const imgArray = ref([
@@ -140,6 +140,7 @@ img,
 }
 
 .card__img {
+    display: block;
     padding: 0;
     margin: 0 auto;
     margin-top: 1rem;

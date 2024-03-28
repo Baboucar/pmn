@@ -12,7 +12,7 @@
         <hr class="hr">
 
         <section class="mission ninty_container">
-            <img class="img__responsive about__img" src="../assets/images/about.png" alt="mission">
+            <img class="img__responsive about__img" src="/images/about.png" alt="mission">
             <div class="mission_desc">
                 <h3 class="about__title">OUR MISSION</h3>
                 <p class="about__sub--title">
@@ -73,7 +73,7 @@ export default {
    
 }
 .fix__banner{
-   background-image: url("../assets/images/business.jpeg");
+   background-image: url("/images/business.jpeg");
    background-size: cover; 
    background-attachment: fixed; 
    background-repeat: no-repeat; 
