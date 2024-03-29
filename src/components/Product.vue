@@ -56,6 +56,12 @@ import Footer from "./Footer.vue";
     margin-top: 1.2rem;
     border-radius: 5px;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease; // Smooth transition for zoom effect
+
+    &:hover {
+        transform: scale(1.05); // Slightly zoom in the card on hover
+    }
+
  }
 
  @media(min-width: 64rem){
