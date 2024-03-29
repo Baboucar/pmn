@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import About from '../components/About.vue';
 import Home from "../components/Home.vue";
 import Moyens from "../components/Moyens.vue";
+import Product from "../components/Product.vue";
 
 
 const router = createRouter({
@@ -22,6 +23,11 @@ const router = createRouter({
       name: 'moyen',
       component:Moyens
       },
+      {
+        path:'/product',
+        name: 'product',
+        component:Product
+        },
     // {
     //   path: '/about',
     //   name: 'about',

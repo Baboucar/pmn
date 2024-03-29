@@ -53,18 +53,18 @@
 
             </p>
             <div class="three__cards">
-                <img class="img__responsive" src="/images/moyens/3card1.webp" alt="">
-                <img class="img__responsive" src="/images/moyens/3card2.webp" alt="">
-                <img class="img__responsive" src="/images/moyens/3card3.webp" alt="">
+                <img class="img__responsive " src="/images/moyens/3card1.webp" alt="">
+                <img class="img__responsive " src="/images/moyens/3card2.webp" alt="">
+                <img class="img__responsive " src="/images/moyens/3card3.webp" alt="">
 
 
             </div>
         </section>
         <section class="ninty__container sixty__container ">
             <div class="three__cards">
-            <img class="img__responsive" src="/images/moyens/cert1.webp" alt="">
-            <img class="img__responsive" src="/images/moyens/cert2.webp" alt="">
-            <img class="img__responsive" src="/images/moyens/cert1.webp" alt="">
+            <img class="img__responsive cert" src="/images/moyens/cert1.webp" alt="">
+            <img class="img__responsive cert" src="/images/moyens/cert2.webp" alt="">
+            <img class="img__responsive cert" src="/images/moyens/cert1.webp" alt="">
            </div>
 
         </section>
@@ -92,7 +92,10 @@ export default {
     background-color: rgba(255, 255, 255, 0.5);
     mix-blend-mode: overlay;
 }
-
+.cert{
+    display: block;
+    margin: 0 auto;
+}
 @media(min-width: 64rem) {
     .banner__img {
         height: auto;
