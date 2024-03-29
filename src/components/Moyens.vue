@@ -17,7 +17,39 @@
                     <img class="img__responsive" src="/images/moyens/second.webp" alt="second">
                
             </div>
+            <p >
+                Mafoder dispose d’un laboratoire interne permettant de contrôler l’intégralité des opérations de production
+
+
+            </p>
+            <div class="four__cards">
+                  <div>
+                    <img class="img__responsive" src="/images/moyens/third.webp" alt="first" >
+                    <p>Carottage</p>
+                  </div>
+                  <div>
+                    <img class="img__responsive" src="/images/moyens/fourth.webp" alt="second" >
+                    <p>Essai d’écrasement Prefa selon la norme NM 10.9.003</p>
+                  </div>
+                  <div>
+                    <img class="img__responsive" src="/images/moyens/fifth.webp" alt="second" >
+                    <p>Essai d’écrasement Prefa selon la norme NM 10.9.003</p>
+                  </div>
+                  <div>
+                    <img class="img__responsive" src="/images/moyens/six.webp" alt="second" >
+                    <p>Essai d’écrasement Prefa selon la norme NM 10.9.003</p>
+                  </div>
+
+            </div>
         </section>
+        <section class="ninty_container">
+            <h3>Un contrôle qualité à chaque étape
+            </h3>
+            <p>L’usine dispose d’un atelier de chaudronnerie équipé et dédié à la fabrication des moules nécessaires à la production des ouvrages préfabriqués. Les moules rejoignent ensuite les lignes de production (béton vibré ou béton auto-plaçant), donnant ainsi à Mafoder Prefa la flexibilité de proposer à ses clients le type de béton adapté à leurs besoins.
+
+            </p>
+        </section>
+
     </div>
 </template>
 
@@ -52,5 +84,11 @@ export default {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
+    .four__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
 }
+
 </style>
