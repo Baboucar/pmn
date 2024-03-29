@@ -39,7 +39,7 @@
             </div> -->
             <router-link to="/" class="main_link link_btn">Actuel</router-link>
             <router-link to="/about" class="main_link link_btn">About</router-link>
-            <router-link to="" class="main_link link_btn">Moyens</router-link>
+            <router-link to="/moyen" class="main_link link_btn">Moyens</router-link>
             
             <router-link to="" class="main_link link_btn">Presentation</router-link>
             <router-link to="" class="main_link link_btn" >Presentation</router-link>
