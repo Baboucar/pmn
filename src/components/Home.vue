@@ -110,7 +110,7 @@ export default defineComponent({
 
         // Sample images array
         const images = ref([
-            '/slider/card2.webp',
+            '/slider/slide3.jpeg',
             '/slider/slide3.jpeg',
             '/slider/slide3.jpeg'
         ]);
