@@ -3,6 +3,7 @@ import About from '../components/About.vue';
 import Home from "../components/Home.vue";
 import Moyens from "../components/Moyens.vue";
 import Product from "../components/Product.vue";
+import Achievement from "../components/Achievement.vue";
 
 
 const router = createRouter({
@@ -28,6 +29,11 @@ const router = createRouter({
         name: 'product',
         component:Product
         },
+        {
+          path:'/achievement',
+          name: 'achievement',
+          component:Achievement
+          },
     // {
     //   path: '/about',
     //   name: 'about',

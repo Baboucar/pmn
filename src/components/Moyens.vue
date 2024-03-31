@@ -61,6 +61,8 @@
             </div>
         </section>
         <section class="ninty__container sixty__container ">
+            <h2>Certifications
+            </h2>
             <div class="three__cards">
             <img class="img__responsive cert" src="/images/moyens/cert1.webp" alt="">
             <img class="img__responsive cert" src="/images/moyens/cert2.webp" alt="">
@@ -91,6 +93,8 @@ export default {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     mix-blend-mode: overlay;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
 }
 .cert{
     display: block;

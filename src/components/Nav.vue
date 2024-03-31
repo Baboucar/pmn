@@ -42,7 +42,7 @@
             <router-link to="/moyen" class="main_link link_btn">Moyens</router-link>
             
             <router-link to="/product" class="main_link link_btn">Products</router-link>
-            <router-link to="/achievement" class="main_link link_btn" >Achievement</router-link>
+            <router-link to="/achievement" class="main_link link_btn" >Réalisations</router-link>
             <router-link to="" class="main_link link_btn" >Presentation</router-link>
             <router-link to="" class="main_link link_btn" >Contact</router-link>
 
