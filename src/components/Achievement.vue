@@ -84,10 +84,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
+
 :deep(.ninty_container img) {
     display: inline-block;
     margin: 1rem auto;
+    width: 100%;
    
     
 }
@@ -97,9 +99,11 @@ export default {
             width: 75%;
            
         }
-        .my-gallery {
-            display: grid ;
-            grid-template-columns: 1fr 1fr 1fr;
+    
+        .my-gallery{
+            width: 80%;
+            margin: 0 auto;
         }
+      
     }
 </style>
