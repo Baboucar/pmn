@@ -1,7 +1,7 @@
 <template>
     <div>
      <Nav/>
-     <img src="/images/Carrousel3.webp" alt="">
+     <img class="img__responsive" src="/images/Carrousel3.webp" alt="">
      <section class="ninty_container">
         <vue-picture-swipe  :items="items"></vue-picture-swipe>
 
