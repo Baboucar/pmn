@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@growthbunker/vuetimeline": "^0.1.17",
     "normalize.css": "^8.0.1",
     "timeline-vuejs": "^1.1.7",

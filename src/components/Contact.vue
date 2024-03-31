@@ -2,8 +2,8 @@
     <div>
         <Nav />
         <section class="ninty_container">
-
-            <form action="" class="ninty_container">
+          
+            <form action="" class="ninty_container" ref="form" @submit.prevent="sendEmail">
                 <h3 class="form__title">
 
                     For any inquiries, please call or email us. <br> Alternatively you can fill in the following contact
@@ -13,33 +13,37 @@
                     Adresse :  Diamniadio cité senegindia Immeuble simba en face siége Teylium
                 </p>
                 <p>Send Us a Message</p>
-                <div class="group">
-                    <div>
-
-                        <input type="text" name="" placeholder="Full Name*" id="">
-                    </div>
-                    <div>
-
-                        <input type="text" name="" placeholder="Company*" id="">
-                    </div>
+                <div v-if="message.content" :class="{'message-success': message.type === 'success', 'message-error': message.type === 'error'}">
+                    {{ message.content }}
                 </div>
                 <div class="group">
                     <div>
 
-                        <input type="number" name="" placeholder="Phone Number*" id="">
+                        <input required type="text" name="name" placeholder="Full Name*" id="">
                     </div>
                     <div>
 
-                        <input type="Email" name="" placeholder="Email*" id="">
+                        <input required type="text" name="company" placeholder="Company*" id="">
+                    </div>
+                </div>
+                <div class="group">
+                    <div>
+
+                        <input required type="number" name="number" placeholder="Phone Number*" id="">
+                    </div>
+                    <div>
+
+                        <input required type="Email" name="email" placeholder="Email*" id="">
                     </div>
                 </div>
                 <div>
-                    <input type="text" name="" placeholder="Subject" id="">
+                    <input type="text" name="subject" placeholder="Subject" id="">
                 </div>
                 <div>
-                    <textarea placeholder="message*" name="" id="" cols="30" rows="10"></textarea>
+                    <textarea required placeholder="message*" name="message" id="" cols="30" rows="10"></textarea>
                 </div>
-                <button>Send</button>
+               
+                <input class="button" type="submit" value="Send">
             </form>
         </section>
         <section class="map">
@@ -55,11 +59,35 @@
 <script>
 import Nav from "./Nav.vue";
 import Footer from "./Footer.vue";
+import emailjs from '@emailjs/browser';
+
 export default {
     components: {
         Nav,
         Footer
-    }
+    },
+    data() {
+        return {
+            message: {
+                content: '',
+                type: '' // 'success' or 'error'
+            }
+        };
+    },
+    methods: {
+    sendEmail() {
+        emailjs.sendForm('service_obkwpg6', 'template_uqnlxfp', this.$refs.form, 'rSsLKVvJyAgMvlIk3')
+            .then(() => {
+                this.message.content = 'Email sent successfully!';
+                this.message.type = 'success';
+            })
+            .catch((error) => {
+                this.message.content = 'Failed to send email: ' + error.text;
+                this.message.type = 'error';
+            });
+    },
+}
+
 }
 </script>
 
@@ -79,18 +107,26 @@ textarea {
     margin-top: 1rem;
 }
 
-button {
+.button {
     padding: .8rem;
     background: #069861;
     border: none;
     color: #FFFFFF;
     width: 6rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 .address{
     font-size: 17px;
     font-weight: 400;
     
+}
+.message-success {
+    color: rgb(92, 178, 92);
+}
+
+.message-error {
+    color: red;
 }
 
 @media(min-width:64rem) {
