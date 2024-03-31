@@ -4,6 +4,7 @@ import Home from "../components/Home.vue";
 import Moyens from "../components/Moyens.vue";
 import Product from "../components/Product.vue";
 import Achievement from "../components/Achievement.vue";
+import Contact from "../components/Contact.vue";
 
 
 const router = createRouter({
@@ -34,6 +35,11 @@ const router = createRouter({
           name: 'achievement',
           component:Achievement
           },
+          {
+            path:'/contact',
+            name: 'contact',
+            component:Contact
+            },
     // {
     //   path: '/about',
     //   name: 'about',

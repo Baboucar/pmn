@@ -2,7 +2,7 @@
     <div>
      <Nav/>
     
-      <img class="img__responsive" src="/images/product/productbanner.webp" alt="" srcset="">
+      <img class="img__responsive banner__img" src="/images/product/productbanner.webp" alt="" srcset="">
       <div class="six_card ninty_container">
         <div class="card">
             <img class="img__responsive " src="/images/product/p1.jpeg" alt="">
@@ -61,6 +61,10 @@ import Footer from "./Footer.vue";
     &:hover {
         transform: scale(1.05); // Slightly zoom in the card on hover
     }
+
+ }
+ .banner__img{
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
  }
 
