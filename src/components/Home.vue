@@ -84,7 +84,7 @@
 
 <script>
 import Nav from './Nav.vue';
-import Nav2 from './Nav2.vue'
+
 import Footer from './Footer.vue';
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';

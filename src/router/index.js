@@ -5,6 +5,7 @@ import Moyens from "../components/Moyens.vue";
 import Product from "../components/Product.vue";
 import Achievement from "../components/Achievement.vue";
 import Contact from "../components/Contact.vue";
+import President from '../components/President.vue';
 
 
 const router = createRouter({
@@ -40,6 +41,11 @@ const router = createRouter({
             name: 'contact',
             component:Contact
             },
+            {
+              path:'/president',
+              name: 'president',
+              component:President
+              },
     // {
     //   path: '/about',
     //   name: 'about',

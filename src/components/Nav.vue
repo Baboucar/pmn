@@ -14,8 +14,8 @@
             <router-link to="/" class="main_link ">Actuel</router-link>
             <router-link @click="toggleSubNav('subNav1')" to="#" class="main_link ">Groupe +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav1">
-              <router-link class="sub__menu--links" to="/about">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
+              <router-link class="sub__menu--links" to="/president">Mot du president</router-link>
+              <router-link class="sub__menu--links" to="/about">About</router-link>
               <router-link class="sub__menu--links" to="">Link2</router-link>
               <router-link class="sub__menu--links" to="">Link2</router-link>
 
@@ -56,8 +56,8 @@
        
       </div>
       <div v-show="subNavStates.subNav1" class="submenu__desktop done">
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
+        <router-link class="sub__menu--links" to="/president">Pesident</router-link>
+        <router-link class="sub__menu--links" to="/about">About</router-link>
         <router-link class="sub__menu--links" to="">Link2</router-link>
         <router-link class="sub__menu--links" to="">Link2</router-link>
       </div>
@@ -249,6 +249,7 @@ nav{
       border-bottom: none;
       display: inline-block;
       padding-left: 5rem;
+      padding-top: 1.5rem;
      
     }
    
@@ -256,7 +257,7 @@ nav{
     .mobile__logo{
       max-width: 100%;
     width: 165px;
-    height: 70px;
+    height: 75px;
     margin-top: 0;
     }
 .flex__desktopnav{
@@ -269,7 +270,7 @@ nav{
 .submenu__desktop{
   display: block;
   position: absolute;
-  
+  padding-top: .8rem;
   top: 2.5rem;
   width: 7rem;
   z-index: 100;
