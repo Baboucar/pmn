@@ -32,7 +32,7 @@
             </div>
             <router-link @click="toggleSubNav('subNav3')" to="#" class="main_link ">Organization +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav3">
-              <router-link class="sub__menu--links" to="/product">Organogram</router-link>
+              <router-link class="sub__menu--links" to="/organ">Organogram</router-link>
               <router-link class="sub__menu--links" to="">Gesion</router-link>
               <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
              
@@ -66,7 +66,7 @@
         <router-link class="sub__menu--links" to="">Promotion</router-link>
       </div>
       <div v-show="subNavStates.subNav3" class="submenu__desktop dthree">
-        <router-link class="sub__menu--links" to="/product">Organogram</router-link>
+        <router-link class="sub__menu--links" to="/organ">Organogram</router-link>
         <router-link class="sub__menu--links" to="">Gesion</router-link>
         <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
 

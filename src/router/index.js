@@ -6,6 +6,7 @@ import Product from "../components/Product.vue";
 import Achievement from "../components/Achievement.vue";
 import Contact from "../components/Contact.vue";
 import President from '../components/President.vue';
+import Organogram from '../components/Organogram.vue';
 
 
 const router = createRouter({
@@ -46,6 +47,11 @@ const router = createRouter({
               name: 'president',
               component:President
               },
+              {
+                path:'/organ',
+                name: 'organ',
+                component:Organogram
+                },
     // {
     //   path: '/about',
     //   name: 'about',
