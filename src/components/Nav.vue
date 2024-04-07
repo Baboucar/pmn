@@ -12,39 +12,38 @@
        
            
             <router-link to="/" class="main_link ">Actuel</router-link>
-            <router-link @click="toggleSubNav('subNav1')" to="#" class="main_link ">Groupe +</router-link>
+            <router-link @click="toggleSubNav('subNav1')" to="#" class="main_link ">Presentation +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav1">
-              <router-link class="sub__menu--links" to="/president">Mot du president</router-link>
-              <router-link class="sub__menu--links" to="/about">About</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
+              <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
+              <router-link class="sub__menu--links" to="/vision">Vision</router-link>
+              <router-link class="sub__menu--links" to="">Mission</router-link>
+              <router-link class="sub__menu--links" to="">Objective</router-link>
+              <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
+
 
 
             </div>
             <router-link to="#" @click="toggleSubNav('subNav2')" class="main_link ">Domain +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav2">
-              <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
+              <router-link class="sub__menu--links" to="">Matrise</router-link>
+              <router-link class="sub__menu--links" to="">Promotion</router-link>
 
 
             </div>
-            <router-link @click="toggleSubNav('subNav3')" to="#" class="main_link ">Products +</router-link>
+            <router-link @click="toggleSubNav('subNav3')" to="#" class="main_link ">Organization +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav3">
-              <router-link class="sub__menu--links" to="/product">Products</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
+              <router-link class="sub__menu--links" to="/product">Organogram</router-link>
+              <router-link class="sub__menu--links" to="">Gesion</router-link>
+              <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
+             
 
 
             </div>
             <router-link @click="toggleSubNav('subNav4')" to="#" class="main_link " >Activities +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav4">
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
-              <router-link class="sub__menu--links" to="">Link2</router-link>
+              <router-link class="sub__menu--links" to="">Services</router-link>
+              <router-link class="sub__menu--links" to="">Terrain</router-link>
+             
 
 
             </div>
@@ -56,28 +55,25 @@
        
       </div>
       <div v-show="subNavStates.subNav1" class="submenu__desktop done">
-        <router-link class="sub__menu--links" to="/president">Pesident</router-link>
-        <router-link class="sub__menu--links" to="/about">About</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
+        <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
+        <router-link class="sub__menu--links" to="/vision">Vision</router-link>
+        <router-link class="sub__menu--links" to="">Mission</router-link>
+        <router-link class="sub__menu--links" to="">Objective</router-link>
+        <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
       </div>
       <div v-show="subNavStates.subNav2" class="submenu__desktop dtwo">
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
+        <router-link class="sub__menu--links" to="">Matrise</router-link>
+        <router-link class="sub__menu--links" to="">Promotion</router-link>
       </div>
       <div v-show="subNavStates.subNav3" class="submenu__desktop dthree">
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
+        <router-link class="sub__menu--links" to="/product">Organogram</router-link>
+        <router-link class="sub__menu--links" to="">Gesion</router-link>
+        <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
+
       </div>
       <div v-show="subNavStates.subNav4" class="submenu__desktop dfour">
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
-        <router-link class="sub__menu--links" to="">Link2</router-link>
+        <router-link class="sub__menu--links" to="">Services</router-link>
+        <router-link class="sub__menu--links" to="">Terrain</router-link>
       </div>
 
       </div>
@@ -158,6 +154,7 @@ import { reactive, ref } from 'vue';
   display: block;
   font-size: .8rem;
   padding-left: 2rem;
+  width: 7rem;
 
 }
  .harmburger__icon{
@@ -280,17 +277,19 @@ nav{
 
 }
 .dtwo{
-  left: 40rem; // Adjust based on design, could be 0 for a dropdown
+  left: 42rem; // Adjust based on design, could be 0 for a dropdown
 
 }
 .dthree{
-  left: 50rem;
+  left: 52rem;
 }
 .dfour{
-  left: 60rem;
+  left: 64rem;
 }
 .sub__menu--links{
   display: block;
+  background: $color-primary;
+  padding-right: .5rem;
 }
 
  }
