@@ -2,7 +2,8 @@
     <div>
      <div class="flex__desktopnav">
      <div class="mobile__header">
-        <img class="mobile__logo" src="../assets/logo.png" alt="logo">
+      <router-link to="/" class="home__link">   <img class="mobile__logo" src="../assets/logo.png" alt="logo"></router-link>
+     
         <span class="harmburger__icon" @click="toggleNav">&#9776;</span>
        </div> 
 
@@ -15,9 +16,9 @@
             <router-link @click="toggleSubNav('subNav1')" to="#" class="main_link ">Presentation +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav1">
               <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
-              <router-link class="sub__menu--links" to="/vision">Vision</router-link>
+              <router-link class="sub__menu--links" to="/vision">Vision &amp; Mission</router-link>
               <router-link class="sub__menu--links" to="">Mission</router-link>
-              <router-link class="sub__menu--links" to="">Objective</router-link>
+              <router-link class="sub__menu--links" to="/objective">Objective</router-link>
               <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
 
 
@@ -56,9 +57,8 @@
       </div>
       <div v-show="subNavStates.subNav1" class="submenu__desktop done">
         <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
-        <router-link class="sub__menu--links" to="/vision">Vision</router-link>
-        <router-link class="sub__menu--links" to="">Mission</router-link>
-        <router-link class="sub__menu--links" to="">Objective</router-link>
+        <router-link class="sub__menu--links" to="/vision">Vision &amp; Mission</router-link>
+        <router-link class="sub__menu--links" to="/objective">Objective</router-link>
         <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
       </div>
       <div v-show="subNavStates.subNav2" class="submenu__desktop dtwo">
@@ -290,6 +290,9 @@ nav{
   display: block;
   background: $color-primary;
   padding-right: .5rem;
+}
+.home__link{
+  display: flex;
 }
 
  }

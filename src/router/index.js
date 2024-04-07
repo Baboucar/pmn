@@ -7,6 +7,8 @@ import Achievement from "../components/Achievement.vue";
 import Contact from "../components/Contact.vue";
 import President from '../components/President.vue';
 import Organogram from '../components/Organogram.vue';
+import Vision from '../components/Vision.vue';
+import Objective from '../components/Objective.vue';
 
 
 const router = createRouter({
@@ -52,6 +54,21 @@ const router = createRouter({
                 name: 'organ',
                 component:Organogram
                 },
+                {
+                  path:'/organ',
+                  name: 'organ',
+                  component:Organogram
+                  },
+                  {
+                    path:'/vision',
+                    name:'vision',
+                    component:Vision
+                  },
+                  {
+                    path:'/objective',
+                    name:'objective',
+                    component:Objective
+                  }
     // {
     //   path: '/about',
     //   name: 'about',
