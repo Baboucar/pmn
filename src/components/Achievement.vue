@@ -84,14 +84,14 @@ export default {
 }
 </script>
 
-<style lang="scss" >
-
-:deep(.ninty_container img) {
+<style lang="scss" scoped>
+img{
+  width: 100%;
+}
+::deep(.ninty_container img) {
     display: inline-block;
     margin: 1rem auto;
-    width: 100%;
-   
-    
+    width: 100%; 
 }
 
     @media(min-width: 64rem){
@@ -101,9 +101,13 @@ export default {
         }
     
         .my-gallery{
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
         }
       
+       img{
+       
+    
+       }
     }
 </style>

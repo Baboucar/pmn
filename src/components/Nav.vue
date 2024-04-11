@@ -13,40 +13,47 @@
        
            
             <router-link to="/" class="main_link ">Actuel</router-link>
-            <router-link @click="toggleSubNav('subNav1')" to="#" class="main_link ">Presentation +</router-link>
-            <div class="sub__menu" v-show="subNavStates.subNav1">
+            <div class="wrapper"  @mouseenter="showSubNav('subNav1')" @mouseleave="hideSubNav('subNav1')">
+
+            <router-link @click="toggleSubNav('subNav1')"   to="#" class="main_link ">Presentation +</router-link>
+            <div class="sub__menu" v-show="subNavStates.subNav1" >
               <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
               <router-link class="sub__menu--links" to="/vision">Vision &amp; Mission</router-link>
               <router-link class="sub__menu--links" to="">Mission</router-link>
               <router-link class="sub__menu--links" to="/objective">Objective</router-link>
               <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
-
-
-
             </div>
+            </div>
+            <div class="wrapper"  @mouseenter="showSubNav('subNav2')" @mouseleave="hideSubNav('subNav2')">
+            
             <router-link to="#" @click="toggleSubNav('subNav2')" class="main_link ">Domain +</router-link>
+            </div>
             <div class="sub__menu" v-show="subNavStates.subNav2">
-              <router-link class="sub__menu--links" to="">Matrise</router-link>
-              <router-link class="sub__menu--links" to="">Promotion</router-link>
+              <router-link class="sub__menu--links" to="/promotion">Matrise &amp; Promotion</router-link>
+           
 
 
             </div>
+            <div class="wrapper"  @mouseenter="showSubNav('subNav3')" @mouseleave="hideSubNav('subNav1')">
+
             <router-link @click="toggleSubNav('subNav3')" to="#" class="main_link ">Organization +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav3">
               <router-link class="sub__menu--links" to="/organ">Organogram</router-link>
-              <router-link class="sub__menu--links" to="">Gesion</router-link>
+              <router-link class="sub__menu--links" to="/gestion">Gesion</router-link>
               <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
              
 
 
             </div>
+            </div>
+            <div class="wrapper"  @mouseenter="showSubNav('subNav4')" @mouseleave="hideSubNav('subNav4')">
+
             <router-link @click="toggleSubNav('subNav4')" to="#" class="main_link " >Activities +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav4">
-              <router-link class="sub__menu--links" to="">Services</router-link>
-              <router-link class="sub__menu--links" to="">Terrain</router-link>
-             
+              <router-link class="sub__menu--links" to="">Services  &amp; Terrain</router-link>
+   
 
-
+            </div>
             </div>
             <router-link to="/achievement" class="main_link " >Réalisations</router-link>
             
@@ -55,25 +62,25 @@
         </nav>
        
       </div>
-      <div v-show="subNavStates.subNav1" class="submenu__desktop done">
+      <div   @mouseenter="showSubNav('subNav1')" @mouseleave="hideSubNav('subNav1')" v-show="subNavStates.subNav1" class="submenu__desktop done">
         <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
         <router-link class="sub__menu--links" to="/vision">Vision &amp; Mission</router-link>
         <router-link class="sub__menu--links" to="/objective">Objective</router-link>
         <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
       </div>
-      <div v-show="subNavStates.subNav2" class="submenu__desktop dtwo">
-        <router-link class="sub__menu--links" to="">Matrise</router-link>
-        <router-link class="sub__menu--links" to="">Promotion</router-link>
+      <div  @mouseenter="showSubNav('subNav2')" @mouseleave="hideSubNav('subNav2')" v-show="subNavStates.subNav2" class="submenu__desktop dtwo">
+        <router-link class="sub__menu--links" to="/promotion">Matrise &amp; Promotion</router-link>
+     
       </div>
-      <div v-show="subNavStates.subNav3" class="submenu__desktop dthree">
+      <div  @mouseenter="showSubNav('subNav3')" @mouseleave="hideSubNav('subNav3')" v-show="subNavStates.subNav3" class="submenu__desktop dthree">
         <router-link class="sub__menu--links" to="/organ">Organogram</router-link>
-        <router-link class="sub__menu--links" to="">Gesion</router-link>
+        <router-link class="sub__menu--links" to="/gestion">Gesion</router-link>
         <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
 
       </div>
-      <div v-show="subNavStates.subNav4" class="submenu__desktop dfour">
-        <router-link class="sub__menu--links" to="">Services</router-link>
-        <router-link class="sub__menu--links" to="">Terrain</router-link>
+      <div  @mouseenter="showSubNav('subNav4')" @mouseleave="hideSubNav('subNav4')" v-show="subNavStates.subNav4" class="submenu__desktop dfour">
+        <router-link class="sub__menu--links" to="/services">Services  &amp; Terrain</router-link>
+       
       </div>
 
       </div>
@@ -99,6 +106,14 @@ import { reactive, ref } from 'vue';
       subNavStates[navKey] = !subNavStates[navKey];
     }
 
+    function showSubNav(navKey) {
+      subNavStates[navKey] = true;
+    }
+    function hideSubNav(navKey) {
+      subNavStates[navKey] = false;
+    }
+
+
     function toggleNav() {
       isNavOpen.value = !isNavOpen.value;
     }
@@ -107,7 +122,7 @@ import { reactive, ref } from 'vue';
       isNavOpen.value = false;
     }
 
-    return { isNavOpen, subNavStates, toggleSubNav, toggleNav, closeNav };
+    return { isNavOpen, subNavStates, showSubNav, hideSubNav, toggleNav, closeNav,toggleSubNav };
   }
 
   }
@@ -145,6 +160,7 @@ import { reactive, ref } from 'vue';
   
  }
  .main_link{
+  position: relative;
    border-bottom: 1px solid #FFF; /* 1px solid black line */
    padding-left: 1rem;
    display: block;
@@ -294,6 +310,8 @@ nav{
 .home__link{
   display: flex;
 }
-
+.wrapper{
+  display: inline;
+}
  }
 </style>

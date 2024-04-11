@@ -7,7 +7,7 @@
             <p class="desc">La synergie de nos activités complémentaires et la force de notre capital  humain font partie
                 des piliers de l'excellence d'Interlux.
             </p>
-            <img class="img__responsive" src="/public/images/organigramm.png" alt="organogram">
+            <img class="img__responsive" src="/images/organigramm.png" alt="organogram">
         </section>
         <Footer/>
     </div>

@@ -2,22 +2,17 @@
     <div>
         <Nav />
         <Carousel :autoplay="4000" :wrap-around="true">
-            <!-- <Slide v-for="image in images" 
-        >
-          <div class="carousel__item">
-                <img v-for="image in images" :src="image.src" :alt="image.alt" :key="image.id" />
-
-          </div>
-        </Slide> -->
             <Slide v-for="(image, index) in images" :key="index">
-                <img  :src="image" :alt="`Image ${index}`">
+              <div class="carousel__item">
+                <img :src="image.src" :alt="`Image ${index}`">
+                <div class="carousel__caption">{{ image.text }}</div>
+              </div>
             </Slide>
-
             <template #addons>
                 <Navigation />
                 <Pagination />
             </template>
-        </Carousel>
+          </Carousel>
 
         <section class="about">
             <p class="about_desc">
@@ -111,9 +106,9 @@ export default defineComponent({
 
         // Sample images array
         const images = ref([
-            '/slider/slide3.jpeg',
-            '/slider/slide3.jpeg',
-            '/slider/slide3.jpeg'
+            { src: '/slider/slide3.jpeg', text: 'DREAM TOGETHER AND MAKE IT HAPPEN! ' },
+        { src: '/slider/slide3.jpeg', text: 'DREAM TOGETHER AND MAKE IT HAPPEN!' },
+        { src: '/slider/slide3.jpeg', text: 'Caption for slide 3' }
         ]);
 
         const imgArray = ref([
@@ -191,6 +186,27 @@ carousel__item {
  width: 90%;
  margin: 0 auto;
 }
+
+.carousel__caption {
+    position: absolute;
+    top: 40%; // Positioning the text a bit above the middle
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold; // Making the font bold
+    color: white; // The text color seems to be white
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+
+    // If you want a text shadow similar to the one in the image, uncomment the following line:
+    // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+// Make sure to apply the button style to your "Join With Us" button
+
 @media(min-width: 64rem) {
     .about {
         width: 60%;
@@ -221,6 +237,10 @@ carousel__item {
         width: 13rem;
         padding-left: 4rem;
         padding-bottom: 1rem;
+      }
+
+      .carousel__caption{
+        font-size: 3.5rem;
       }
 }
 </style>

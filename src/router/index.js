@@ -9,7 +9,9 @@ import President from '../components/President.vue';
 import Organogram from '../components/Organogram.vue';
 import Vision from '../components/Vision.vue';
 import Objective from '../components/Objective.vue';
-
+import Promotion from '../components/Promotion.vue';
+import Services from '../components/Services.vue';
+import Gestion from '../components/Gestion.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,6 +70,21 @@ const router = createRouter({
                     path:'/objective',
                     name:'objective',
                     component:Objective
+                  },
+                  {
+                    path:'/promotion',
+                    name:'promotion',
+                    component:Promotion
+                  },
+                  {
+                    path:'/services',
+                    name:'services',
+                    component:Services
+                  },
+                  {
+                    path:'/gestion',
+                    name:'gestion',
+                    component:Gestion
                   }
     // {
     //   path: '/about',
