@@ -34,13 +34,15 @@
 
 
             </div>
-            <div class="wrapper"  @mouseenter="showSubNav('subNav3')" @mouseleave="hideSubNav('subNav1')">
+            <div class="wrapper"  @mouseenter="showSubNav('subNav3')" @mouseleave="hideSubNav('subNav3')">
 
             <router-link @click="toggleSubNav('subNav3')" to="#" class="main_link ">Organization +</router-link>
             <div class="sub__menu" v-show="subNavStates.subNav3">
               <router-link class="sub__menu--links" to="/organ">Organogram</router-link>
               <router-link class="sub__menu--links" to="/gestion">Gesion</router-link>
               <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
+              <router-link class="sub__menu--links" to="/copil">Copil</router-link>
+
              
 
 
@@ -76,6 +78,8 @@
         <router-link class="sub__menu--links" to="/organ">Organogram</router-link>
         <router-link class="sub__menu--links" to="/gestion">Gesion</router-link>
         <router-link class="sub__menu--links" to="/moyen">Moyen</router-link>
+        <router-link class="sub__menu--links" to="/moyen">Copil</router-link>
+
 
       </div>
       <div  @mouseenter="showSubNav('subNav4')" @mouseleave="hideSubNav('subNav4')" v-show="subNavStates.subNav4" class="submenu__desktop dfour">
