@@ -11,11 +11,14 @@
         <div class="ninty_container">
             <h3>Menu</h3>
             <ul>
-                <li><a href="http://">Mot du Coordonnateur</a></li>
-                <li><a href="http://">Mot du Coordonnateur</a></li>
-                <li><a href="http://">Mot du Coordonnateur</a></li>
-                <li><a href="http://">Mot du Coordonnateur</a></li>
-                <li><a href="http://">Mot du Coordonnateur</a></li>
+                <li><router-link to="/gallery">Gallery</router-link></li>
+                <li><router-link to="/pdf">Files</router-link></li>
+                <li><router-link to="">Mot du Coordonnateur</router-link></li>
+                <li><router-link to="">Mot du Coordonnateur</router-link></li>
+                <li><router-link to="">Mot du Coordonnateur</router-link></li>
+
+
+               
 
 
             </ul>

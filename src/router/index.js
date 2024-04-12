@@ -12,6 +12,9 @@ import Objective from '../components/Objective.vue';
 import Promotion from '../components/Promotion.vue';
 import Services from '../components/Services.vue';
 import Gestion from '../components/Gestion.vue';
+import Pdf from '../components/Pdf.vue';
+import Gallery from '../components/Gallery.vue';
+import Pdfviewer from '../components/Pdfviewer.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -85,6 +88,17 @@ const router = createRouter({
                     path:'/gestion',
                     name:'gestion',
                     component:Gestion
+                  },
+                  
+                  {
+                    path:'/gallery',
+                    name:'gallery',
+                    component:Gallery
+                  },
+                  {
+                    path:'/pdf',
+                    name:'pdfviewer',
+                    component:Pdfviewer
                   }
     // {
     //   path: '/about',
