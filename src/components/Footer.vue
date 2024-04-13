@@ -57,15 +57,26 @@
             </ul>
         </div>
     </footer>
+    <div class="reserve">
+        © {{ currentYear }} Your Company Name. All rights reserved.
+    </div>
 </template>
 
 <script>
 export default {
 
+
+    data() {
+        return {
+            currentYear: new Date().getFullYear()
+        };
+    }
 }
+
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/base.scss";
 .footer{
     background: #282828;
     color: #FFFFFF;
@@ -87,6 +98,11 @@ export default {
  }
  .last{
     display: inline-block;
+ }
+ .reserve{
+    text-align: center;
+    background:$color-primary;
+    color: #FFFFFF;
  }
 @media(min-width:64rem){
     .footer{
