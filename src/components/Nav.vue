@@ -1,5 +1,10 @@
 <template>
     <div>
+      <div class="marquee-container">
+        <div class="marquee-text">
+          <p><strong class="strong">Offre nouveaux inscrits  : </strong> les SMS à 0.045HT€ quelque soit le volume commandé*, sans abonnement et sans engagement ! Offre réservée aux nouveaux inscrits, crédits achetés valables 90 jours.</p>
+        </div>
+      </div>
      <div class="flex__desktopnav">
      <div class="mobile__header">
       <router-link to="/" class="home__link">   <img class="mobile__logo" src="../assets/logo.png" alt="logo"></router-link>
@@ -236,6 +241,38 @@ nav{
   display: none;
  }
 
+ .marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Adjust height as needed */
+  background-color: #f8f8f8; /* Background color of the marquee */
+}
+
+.marquee-text {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scrollingMarquee 70s linear infinite; /* Adjust speed by changing the duration (e.g., 10s) */
+}
+
+.strong {
+  font-weight: bold;
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scrollingMarquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Make the marquee responsive */
+@media screen and (max-width: 768px) {
+  .marquee-text {
+    font-size: 14px; /* Smaller font size on smaller screens */
+  }
+}
+
  @media(min-width: 64rem){
    
    .nav{
@@ -288,7 +325,7 @@ nav{
   display: block;
   position: absolute;
   padding-top: .8rem;
-  top: 2.5rem;
+  top: 6rem;
   width: 7rem;
   z-index: 100;
 }

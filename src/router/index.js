@@ -15,6 +15,7 @@ import Gestion from '../components/Gestion.vue';
 import Pdf from '../components/Pdf.vue';
 import Gallery from '../components/Gallery.vue';
 import Pdfviewer from '../components/Pdfviewer.vue';
+import Team from "../components/Team.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -99,6 +100,11 @@ const router = createRouter({
                     path:'/pdf',
                     name:'pdfviewer',
                     component:Pdfviewer
+                  },
+                  {
+                    path:'/team',
+                    name:'team',
+                    component:Team
                   }
     // {
     //   path: '/about',

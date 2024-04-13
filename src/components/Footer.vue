@@ -7,13 +7,18 @@
             Mafoder Urban Development is your reference partner for the supply of turnkey products for urban
             development.
         </p>
+       <div class="ninty_container">
+        <a href=""><img class="icon" src="/ifacebook.png" alt="" srcset=""></a>
+        <a href=""><img class="icon" src="/ilinkedin.png" alt="" srcset=""></a>
+        <a href=""><img class="icon" src="/itwitter.png" alt="" srcset=""></a>
+       </div>
     </div>
         <div class="ninty_container">
             <h3>Menu</h3>
             <ul>
                 <li><router-link to="/gallery">Gallery</router-link></li>
                 <li><router-link to="/pdf">Files</router-link></li>
-                <li><router-link to="">Mot du Coordonnateur</router-link></li>
+                <li><router-link to="/team">Team</router-link></li>
                 <li><router-link to="">Mot du Coordonnateur</router-link></li>
                 <li><router-link to="">Mot du Coordonnateur</router-link></li>
 
@@ -76,6 +81,9 @@ export default {
     margin-top: 1rem;
     margin-left: 1.4rem;
 
+ }
+ .icon{
+ 
  }
  .last{
     display: inline-block;
