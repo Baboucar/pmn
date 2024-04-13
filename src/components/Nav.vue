@@ -2,7 +2,7 @@
     <div>
       <div class="marquee-container">
         <div class="marquee-text">
-          <p><strong class="strong">Offre nouveaux inscrits  : </strong> les SMS à 0.045HT€ quelque soit le volume commandé*, sans abonnement et sans engagement ! Offre réservée aux nouveaux inscrits, crédits achetés valables 90 jours.</p>
+          <p class="weight">Offre nouveaux inscrits  :  les SMS à 0.045HT€ quelque soit le volume commandé*, sans abonnement et sans engagement ! Offre réservée aux nouveaux inscrits, crédits achetés valables 90 jours.</p>
         </div>
       </div>
      <div class="flex__desktopnav">
@@ -223,7 +223,9 @@ nav{
    font-size: 1.7rem;
   
 }
-
+.weight{
+  font-weight: 200;
+}
 .close__button {
    background: none;
    border: none;
@@ -255,9 +257,7 @@ nav{
   animation: scrollingMarquee 70s linear infinite; /* Adjust speed by changing the duration (e.g., 10s) */
 }
 
-.strong {
-  font-weight: bold;
-}
+
 
 /* Keyframes for the scrolling effect */
 @keyframes scrollingMarquee {
@@ -269,6 +269,7 @@ nav{
 @media screen and (max-width: 768px) {
   .marquee-text {
     font-size: 14px; /* Smaller font size on smaller screens */
+    font-weight: 100;
   }
 }
 
