@@ -246,7 +246,7 @@ nav{
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 30px; /* Adjust height as needed */
+  height: 40px; /* Adjust height as needed */
   background-color: #f8f8f8; /* Background color of the marquee */
 }
 
