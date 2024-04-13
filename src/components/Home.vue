@@ -129,6 +129,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.cards{
+    gap: 2rem;
+}
 img,
 .responsive_img {
     max-width: 100%;
