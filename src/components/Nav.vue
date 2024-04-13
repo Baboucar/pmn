@@ -24,7 +24,6 @@
             <div class="sub__menu" v-show="subNavStates.subNav1" >
               <router-link class="sub__menu--links" to="/about">Qui sommes nous</router-link>
               <router-link class="sub__menu--links" to="/vision">Vision &amp; Mission</router-link>
-              <router-link class="sub__menu--links" to="">Mission</router-link>
               <router-link class="sub__menu--links" to="/objective">Objective</router-link>
               <router-link class="sub__menu--links" to="/president">Coordiator</router-link>
             </div>
@@ -245,7 +244,7 @@ nav{
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 50px; /* Adjust height as needed */
+  height: 30px; /* Adjust height as needed */
   background-color: #f8f8f8; /* Background color of the marquee */
 }
 
